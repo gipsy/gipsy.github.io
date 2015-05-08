@@ -1,0 +1,57 @@
+.m-footer
+  +clearfix
+  background-image: url('../images/bg-footer.jpg')
+  background-position: top center
+  // background-repeat: no-repeat
+  background-size: 150%
+  width: 100%
+  height: 100%
+  padding-top: 200px
+  +respond-to(screen-sm)
+    background-size: 250%
+    padding-top: 100px
+  +respond-to(screen-xs)
+    background-size: 270%
+    padding-top: 50px
+
+.m-footer--navigation
+  +clearfix
+  float: left
+  margin: 0
+  padding: 0
+  line-height: 25px
+  li
+    +no-bullets
+    margin-right: 10px
+    font-size: 12px
+    float: left
+    a
+      color: white
+      text-decoration: underline
+
+.m-footer--logo
+  float: left
+  margin-right: 35px
+  background-image: ('../images/logo-footer.png')
+  width: 135px
+  height: 24px
+
+.m-footer--copyright
+  font-size: 12px
+  line-height: 28px
+  float: right
+  color: white
+
+.m-footer__default
+  background-color: #f8f8fa
+  .m-footer--logo
+    background-image: url('../images/logo-footer-default.png')
+    width: 135px
+    height: 24px
+  .m-footer--navigation
+    a
+      color: #868686
+      text-decoration: underline
+  .m-footer--copyright
+    color: #868686
+
