@@ -3,6 +3,40 @@
   padding: 10px 17px
   color: #444444
   border: 1px solid #d9d9d9
+  +respond-to(screen-md)
+    font-size: 18px
+    padding: 8px 15px
+  +respond-to(screen-sm)
+    font-size: 14px
+    padding: 5px 13px
   &:hover
     background-color: #444444
     color: white
+  &.fixed-width
+    width: 225px
+    +respond-to(screen-md)
+      width: 150px
+      font-size: 14px
+    +respond-to(screen-sm)
+      width: 150px
+    +respond-to(screen-xs)
+      width: 100%
+
+.m-button--dark
+  @extend .m-button
+  background-color: #444444
+  color: white
+  border: 1px solid #444444
+  padding: 16px 35px
+  &:hover
+    border: 1px solid #d9d9d9
+
+.m-button--green
+  @extend .m-button
+  background-color: #78ce13
+  color: white
+  border: 1px solid #78ce13
+  padding: 16px 35px
+  &:hover
+    border: 1px solid #d9d9d9
+    background-color: #78ce13
