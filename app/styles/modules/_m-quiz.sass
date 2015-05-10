@@ -19,3 +19,62 @@
       margin-right: 0
 
 .m-quiz--questions-amount
+
+// .m-quiz--header
+//   border-top: 1px solid #d9d9d9
+//   border-bottom: 1px solid #d9d9d9
+
+.m-quiz--play-button
+  background: url(../images/icons/icon-quiz-play.png)
+  display: block
+  width: 74px
+  height: 74px
+  opacity: 0.9
+  &:hover
+    opacity: 1
+
+.m-quiz--table
+  border-collapse: collapse
+  width: 100%
+  th
+    padding: 23px 20px
+    font-size: 1.5em
+    font-weight: 300
+    border-top: 1px solid #d9d9d9
+    border-bottom: 1px solid #d9d9d9
+  td
+    padding: 10px 20px
+    font-size: 2em
+    font-weight: 300
+    &:last-child
+      padding-right: 0
+
+.m-quiz--results-list
+  +clearfix
+  +no-bullets
+  counter-reset: listStyle
+  .iradio_minimal
+    background: transparent
+    width: 34px
+    height: 34px
+
+.m-quiz--results-list li
+  counter-increment: listStyle;
+  float: left
+  margin: 2px
+
+.m-quiz--results-list .iradio_minimal
+  &::before
+    content: counter(listStyle, upper-alpha)
+    text-align: center
+    color: #9a9a9a
+    display: block
+    height: 100%
+    line-height: 34px
+    font-size: 1.188em
+    border: 2px solid #9a9a9a
+    border-radius: 17px
+    background-color: transparent
+  &:hover::before, &.checked::before
+    background-color: #9a9e9a
+    color: white

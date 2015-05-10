@@ -13,6 +13,7 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="bower_components/icheck/skins/minimal/_all.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -69,6 +70,63 @@
       </div>
     </div>
 
+    <div class="container">
+      <table class="m-quiz--table">
+        <tr>
+          <th>#</th>
+          <th>Type</th>
+          <th class="text-center">Correct</th>
+          <th>&nbsp;</th>
+          <th>Difficulty</th>
+          <th>Time</th>
+          <th>&nbsp;</th>
+        </tr>
+        <tr>
+          <td class="text-red">3</td>
+          <td class="text-red">SS</td>
+          <td>
+            <ul class="m-quiz--results-list">
+              <li>
+                <input type="radio" name="answers-percentage" value="" checked>
+              </li>
+              <li>
+                <input type="radio" name="answers-percentage" value="">
+              </li>
+              <li>
+                <input type="radio" name="answers-percentage" value="">
+              </li>
+              <li>
+                <input type="radio" name="answers-percentage" value="">
+              </li>
+              <li>
+                <input type="radio" name="answers-percentage" value="">
+              </li>
+            </ul>
+          </td>
+          <td>PrepTest 37, Section 2, Question 11</td>
+          <td>Med</td>
+          <td>1:50</td>
+          <td><a href="#" class="m-quiz--play-button"</a></td>
+        </tr>
+        <tr class="tab">
+          <td></td>
+          <td></td>
+          <td><a href="#">Hide Answer</a></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="l-content--small m-quiz--list">
+      <div class="container">
+        <table class="m-quiz--table">
+        </table>
+      </div>
+    </div>
+
     <div class="footer">
       <p>♥ from the Yeoman team</p>
     </div>
@@ -86,6 +144,8 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/zepto/zepto.js"></script>
+    <!-- <script src="/bower_components/icheck/icheck.min.js"></script> -->
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -105,6 +165,7 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/vendors/icheck.min.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

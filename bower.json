@@ -3,6 +3,8 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass-official": "~3.3.1",
+    "zepto": "git@github.com:components/zepto.git",
+    "icheck": "git@github.com:fronteed/icheck.git",
     "modernizr": "~2.8.1"
   }
 }

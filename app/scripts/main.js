@@ -1,2 +1,7 @@
 /* jshint devel:true */
-console.log('\'Allo \'Allo!');
+'use strict';
+$( document ).ready(function() {
+    $('input').icheck({
+        radioClass: 'iradio_minimal'
+    });
+});
