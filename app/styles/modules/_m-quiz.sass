@@ -33,6 +33,24 @@
   &:hover
     opacity: 1
 
+%triangle-top
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent
+  border-right: 40px solid transparent
+  border-bottom: 70px solid #d9d9d9
+  position: absolute
+  left: 0px
+
+%triangle-bottom
+  width: 0
+  height: 0
+  border-left: 40px solid transparent
+  border-right: 40px solid transparent
+  border-top: 70px solid #d9d9d9
+  position: absolute
+  left: 0px
+
 .m-quiz--table
   border-collapse: collapse
   width: 100%
@@ -42,26 +60,69 @@
     font-weight: 300
     border-top: 1px solid #d9d9d9
     border-bottom: 1px solid #d9d9d9
+  tr
+    cursor: pointer
+    position: relative
+    &:first-child::before
+      display: none
+    // #TODO Accomplish triangles
+    // &::before
+    //   @extend %triangle-top
+    //   content: ""
+    // &.collapsed::before
+    //   content: ""
+    //   @extend %triangle-bottom
   td
-    padding: 10px 20px
+    padding: 100px 20px 0
     font-size: 2em
     font-weight: 300
     &:last-child
       padding-right: 0
 
+.m-quiz--tab td
+  padding-top: 10px
+
 .m-quiz--results-list
   +clearfix
   +no-bullets
+  text-align: center
   counter-reset: listStyle
   .iradio_minimal
     background: transparent
     width: 34px
     height: 34px
 
+%m-quiz--results-list-charts
+  +border-top-radius( 10px )
+  +border-bottom-radius( 10px )
+  display: block
+  position: absolute
+  bottom: 40px
+  width: 8px
+  height: 10px
+  left: 50%
+  margin-left: -4px
+
 .m-quiz--results-list li
   counter-increment: listStyle;
-  float: left
-  margin: 2px
+  margin: 0 2px
+  position: relative
+  display: inline-block
+  +respond-to(screen-md)
+    padding: 0 5px
+  +respond-to(screen-sm)
+    margin: 0 5px
+  +respond-to(screen-xs)
+    margin: 0 5px
+  &.default span
+    @extend %m-quiz--results-list-charts
+    background-color: #9a9a9a
+  &.green span
+    @extend %m-quiz--results-list-charts
+    background-color: #78ce14
+  &.red span
+    @extend %m-quiz--results-list-charts
+    background-color: #ff4242
 
 .m-quiz--results-list .iradio_minimal
   &::before
@@ -78,3 +139,8 @@
   &:hover::before, &.checked::before
     background-color: #9a9e9a
     color: white
+
+.m-quiz--tab-content
+  background-color: #fcfefc
+  font-family: "Times", serif
+  padding: 20px

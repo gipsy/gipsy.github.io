@@ -81,41 +81,85 @@
           <th>Time</th>
           <th>&nbsp;</th>
         </tr>
-        <tr>
+        <tr data-toggle="collapse" href="#collapseTab" aria-expanded="false" aria-controls="collapseTab">
           <td class="text-red">3</td>
           <td class="text-red">SS</td>
           <td>
             <ul class="m-quiz--results-list">
-              <li>
+              <li class="default">
+                <span></span>
                 <input type="radio" name="answers-percentage" value="" checked>
               </li>
-              <li>
+              <li class="green">
+                <span style="height: 30px"></span>
                 <input type="radio" name="answers-percentage" value="">
               </li>
-              <li>
+              <li class="default">
+                <span></span>
                 <input type="radio" name="answers-percentage" value="">
               </li>
-              <li>
+              <li class="red">
+                <span style="height: 60px"></span>
                 <input type="radio" name="answers-percentage" value="">
               </li>
-              <li>
+              <li class="default">
+                <span></span>
                 <input type="radio" name="answers-percentage" value="">
               </li>
             </ul>
+            <a href="#" class="text-underline text-gray">Hide Answer</a>
           </td>
           <td>PrepTest 37, Section 2, Question 11</td>
           <td>Med</td>
           <td>1:50</td>
           <td><a href="#" class="m-quiz--play-button"</a></td>
         </tr>
-        <tr class="tab">
-          <td></td>
-          <td></td>
-          <td><a href="#">Hide Answer</a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr id="collapseTab" class="m-quiz--tab collapse">
+          <td colspan="2">
+          <td colspan="3" class="m-quiz--tab-content">
+            7. Ethicist: Robert Gillette has argued that because a thorought knowledge of genetics would enable us to cure the over 3,000 inherited disorders that...
+          </td>
+          <td colspan="2"></td>
+        </tr>
+        <tr data-toggle="collapse" href="#collapseTab2" aria-expanded="false" aria-controls="collapseTab1">
+          <td class="text-green">1</td>
+          <td class="text-green">MT</td>
+          <td>
+            <ul class="m-quiz--results-list">
+              <li class="default">
+                <span></span>
+                <input type="radio" name="answers-percentage" value="" checked>
+              </li>
+              <li class="green">
+                <span style="height: 30px"></span>
+                <input type="radio" name="answers-percentage" value="">
+              </li>
+              <li class="default">
+                <span></span>
+                <input type="radio" name="answers-percentage" value="">
+              </li>
+              <li class="red">
+                <span style="height: 60px"></span>
+                <input type="radio" name="answers-percentage" value="">
+              </li>
+              <li class="default">
+                <span></span>
+                <input type="radio" name="answers-percentage" value="">
+              </li>
+            </ul>
+            <a href="#" class="text-underline text-gray">Hide Answer</a>
+          </td>
+          <td>PrepTest 34, Section 2, Question 9</td>
+          <td>Easy</td>
+          <td>1:00</td>
+          <td><a href="#" class="m-quiz--play-button"</a></td>
+        </tr>
+        <tr id="collapseTab2" class="m-quiz--tab collapse">
+          <td colspan="2">
+          <td colspan="3" class="m-quiz--tab-content">
+            7. Ethicist: Robert Gillette has argued that because a thorought knowledge of genetics would enable us to cure the over 3,000 inherited disorders that...
+          </td>
+          <td colspan="2"></td>
         </tr>
       </table>
     </div>
@@ -127,8 +171,9 @@
       </div>
     </div>
 
-    <div class="footer">
-      <p>♥ from the Yeoman team</p>
+    <div class="m-footer text-center">
+      <a href="/" class="m-footer--logo"></a>
+      <p class="m-footer--copyright">©2015 copyright, lsatengine.com - All rights reserved</p>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
